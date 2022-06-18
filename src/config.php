@@ -11,6 +11,6 @@ return static function (
 ): void {
     $rectorConfig->ruleWithConfiguration(
         MethodCallToMethodCallRector::class,
-        [new MethodCallToMethodCall('AClass', 'methodFromAClass', 'AnotherClass', 'methodFromAnotherClass')]
+        [new MethodCallToMethodCall('SelrahcD\RectorIssueWithMethodCallToMethodCall\AClass', 'methodFromAClass', 'SelrahcD\RectorIssueWithMethodCallToMethodCall\AnotherClass', 'methodFromAnotherClass')]
     );
 };

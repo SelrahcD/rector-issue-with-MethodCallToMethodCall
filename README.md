@@ -5,11 +5,17 @@ I expected the MethodCallToMethodCall rector to be able to perform the following
 ```php
 <?php
 
+namespace SelrahcD\RectorIssueWithMethodCallToMethodCall;
+
 class AClass {
 
     public function run()
     {
         $this->methodFromAClass();
+    }
+
+    public function methodFromAClass()
+    {
     }
 }
 
@@ -17,10 +23,12 @@ class AClass {
 -----
 <?php
 
+namespace SelrahcD\RectorIssueWithMethodCallToMethodCall;
+
 class AClass
 {
     public function __construct(
-            private AnotherClass $anotherClass
+            private SelrahcD\RectorIssueWithMethodCallToMethodCall\AnotherClass $anotherClass
     )
     {
     }
@@ -28,6 +36,10 @@ class AClass
     public function run()
     {
         $this->anotherClass->methodFromAnotherClass();
+    }
+
+    public function methodFromAClass()
+    {
     }
 }
 

@@ -1,10 +1,16 @@
 <?php
 
+namespace SelrahcD\RectorIssueWithMethodCallToMethodCall;
+
 class AClass {
 
     public function run()
     {
         $this->methodFromAClass();
+    }
+
+    public function methodFromAClass()
+    {
     }
 }
 
@@ -12,10 +18,12 @@ class AClass {
 -----
 <?php
 
+namespace SelrahcD\RectorIssueWithMethodCallToMethodCall;
+
 class AClass
 {
     public function __construct(
-            private AnotherClass $anotherClass
+            private Charles\RectorIssueWithMethodCallToMethodCall\AnotherClass $anotherClass
     )
     {
     }
@@ -23,6 +31,10 @@ class AClass
     public function run()
     {
         $this->anotherClass->methodFromAnotherClass();
+    }
+
+    public function methodFromAClass()
+    {
     }
 }
 
